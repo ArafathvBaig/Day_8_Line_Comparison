@@ -33,13 +33,19 @@ public class LineComparison
 		System.out.println("The length of (" + x3 + ", " + y3 + ") and (" + x4 + ", " + y4 + ") is:");
 		System.out.println(+length2);
 
-		if (length1 == length2) 
-		{
-			System.out.println("Equal length");
-		}
-		else
-		{
-			System.out.println("not equal length");
-		}
+		int c= Double.compare(length1, length2);
+	    
+	    if (c==0)
+	    {
+            System.out.println("Length1 and Length2 are Equal");
+        }
+	    else if(c==1)
+	    {
+	    	System.out.println("Length1 is Greater Than Length2");
+	    }
+	    else 
+	    {
+            System.out.println("Length1 is Less Than Length2");
+	    }
 	}
 }
