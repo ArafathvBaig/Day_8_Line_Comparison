@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class LineComparison
 {
-	public static void main(String[] args) 
+	public double x1, x2, x3, x4, y1, y2, y3, y4, length1, length2;
+	public void length()
 	{
-		double x1, x2, x3, x4, y1, y2, y3, y4, length1, length2;
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the value of x1: ");
 		x1 = sc.nextDouble();
@@ -32,9 +32,11 @@ public class LineComparison
 		length2 = Math.sqrt(Math.pow((x4 - x3), 2) + Math.pow((y4 - y3), 2));
 		System.out.println("The length of (" + x3 + ", " + y3 + ") and (" + x4 + ", " + y4 + ") is:");
 		System.out.println(+length2);
-
+	}
+	public void limitations()
+	{
+		length();
 		int c= Double.compare(length1, length2);
-	    
 	    if (c==0)
 	    {
             System.out.println("Length1 and Length2 are Equal");
@@ -47,5 +49,10 @@ public class LineComparison
 	    {
             System.out.println("Length1 is Less Than Length2");
 	    }
+	}
+	public static void main(String[] args) 
+	{
+		LineComparison obj1=new LineComparison();
+		obj1.limitations();
 	}
 }
